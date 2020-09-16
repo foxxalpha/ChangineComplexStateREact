@@ -7,19 +7,18 @@ function App() {
   });
 
   function handleChange(event) {
-    const newValue = event.target.value;
-    const inputName = event.target.name;
+    const { value, name } = event.target;
 
     setFullName((prevValue) => {
-      if (inputName === "fName") {
+      if (name === "fName") {
         return {
-          firstName: newValue,
+          firstName: value,
           lastName: prevValue.lastName
         };
-      } else if (inputName === "lName") {
+      } else if (className === "lName") {
         return {
           firstName: prevValue.firstName,
-          lastName: newValue
+          lastName: value
         };
       }
     });
